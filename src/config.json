@@ -1,0 +1,22 @@
+{
+  "packages": [
+    {
+      "name": "Button",
+      "chnName": "按钮",
+      "desc": "按钮描述文案",
+      "author": "zhenyulei"
+    },
+    {
+      "name": "Menu",
+      "chnName": "菜单",
+      "desc": "菜单描述文案",
+      "author": "zhenyulei"
+    },
+    {
+      "name": "TextBox",
+      "chnName": "文字组件",
+      "desc": "文字渲染组件",
+      "author": "zhenyulei"
+    }
+  ]
+}
