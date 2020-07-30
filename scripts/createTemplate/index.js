@@ -113,7 +113,7 @@ import ${answers.name} from './index.tsx'
 function initIndex(answers){
 const lowerName = answers.name.toLowerCase();
 return `import ${answers.name} from './${lowerName}';
-import './style/index.scss';
+import './${lowerName}.scss';
 export default ${answers.name};`
 }
 
@@ -160,7 +160,7 @@ describe('test测试', () => {
 }
 
 function addStyle(){
-return `@import '../../../styles/index.scss';
+return `@import '../../styles/index.scss';
 .wrapper{
 	width:150px;
 	height:100px;
@@ -190,9 +190,7 @@ function createDir(answers){
 	const lowerName = answers.name.toLowerCase();
 	const filePath = `components/${answers.name}`;
 	mkdirPath(filePath).then(()=>{
-		mkdirPath(`${filePath}/style`).then(()=>{
-			writeFile(`${filePath}/style/index.scss`,addStyle()) //增加样式文件
-		})
+		writeFile(`${filePath}/${lowerName}.scss`,addStyle()) //增加样式文件
 		writeFile(`${filePath}/${lowerName}.mdx`,initMdx(answers)); //增加mdx说明文件
 		writeFile(`${filePath}/${lowerName}.test.tsx`,initTest()); //增加测试文件
 		writeFile(`${filePath}/${lowerName}.tsx`,initTsx(answers));    //增加组件文件

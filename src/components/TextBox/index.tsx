@@ -1,3 +1,3 @@
 import TextBox from './textbox';
-import './style/index.scss';
+import './textbox.scss';
 export default TextBox;

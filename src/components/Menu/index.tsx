@@ -1,7 +1,7 @@
 import MenuBox from './menuBox'
 import SubMenu from './subMenu'
 import MenuItem from './menuItem'
-import './style/index.scss'
+import './menu.scss'
 
 const Menu = {
     MenuBox,

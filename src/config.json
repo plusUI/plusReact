@@ -14,8 +14,8 @@
     },
     {
       "name": "TextBox",
-      "chnName": "文字渲染组件",
-      "desc": "文字组件",
+      "chnName": "文件渲染组件",
+      "desc": "组件文案渲染",
       "author": "zhenyulei"
     }
   ]
