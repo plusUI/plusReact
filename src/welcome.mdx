@@ -11,7 +11,7 @@ route: /
 **安装**
 
 ```js
-npm install reactui -S
+npm install jd-plusui -S
 ```
 
 组件样式基于 sass 开发，需要安装 node-sass
@@ -22,31 +22,8 @@ npm install node-sass -D
 
 **建议使用：按需加载**
 
-用户安装 `npm i reactui -S`,
-首先安装 `@nutui/babel-plugin-separate-import` 插件:
+组件库使用了最新的webpack中的 Tree shaking，可以在直接在应用中按需加载
 
-```js
-npm i @nutui/babel-plugin-separate-import -D
-```
-然后配置一下babel的配置文件，如果使用的create-react-app脚手架，则需要执行 `npm run eject` 后，在package.json中新增 babel的配置项：
-
-```js
-"babel": {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": [
-      [
-        "import",
-        {
-          "libraryName": "reactui",
-          "libraryDirectory": "dist/components",
-          "camel2DashComponentName":false
-        }
-      ]
-    ]
-}
-```
 **使用**
 
 接下来，我们就可以在项目里只引入用到的组件了。默认情况下，样式也无需单独引入。插件会自动将组件的 SCSS 样式引入方式。
@@ -79,5 +56,5 @@ PS:
 
 更新官方方式：
 
-- 1 执行 `npm run docz:build` 之后，在提交 git，则自动更新官方网站。
+- 1 执行 `npm run doc:build` 之后，将生成的 docsite 文件夹内容提交到master分支，在提交 git后，则自动更新官方网站。
 

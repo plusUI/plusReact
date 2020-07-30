@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import classNames from 'classnames'
-import './style/index.scss'
 
 export enum ButtonType {
   Complete='complete',
