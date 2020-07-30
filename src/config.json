@@ -14,7 +14,7 @@
     },
     {
       "name": "TextBox",
-      "chnName": "大家上课",
+      "chnName": "文字渲染组件",
       "desc": "文字组件",
       "author": "zhenyulei"
     }

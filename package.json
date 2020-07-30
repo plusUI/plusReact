@@ -9,7 +9,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.1",
     "classnames": "^2.2.6",
+    "gatsby-plugin-sass": "^2.3.12",
     "react-transition-group": "^4.3.0"
   },
   "scripts": {
@@ -23,7 +25,9 @@
     "build": "rimraf ./dist && npm run build-ts && npm run build-css",
     "add": "node ./scripts/createTemplate/index.js"
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "*.scss"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -56,7 +60,6 @@
     "react-scripts": "3.4.1",
     "rimraf": "^3.0.2",
     "theme-ui": "^0.3.1",
-    "typescript": "~3.7.2",
-    "gatsby-plugin-sass": "^2.3.12"
+    "typescript": "~3.7.2"
   }
 }

@@ -121,7 +121,6 @@ export default ${answers.name};`
 function initTsx(answers){
 return `import React, { FC } from 'react';
 import classNames from 'classnames';
-import './style/index.scss';
 
 interface BaseProps{
 	className?:string;//自定义类名
@@ -196,7 +195,7 @@ function createDir(answers){
 		})
 		writeFile(`${filePath}/${lowerName}.mdx`,initMdx(answers)); //增加mdx说明文件
 		writeFile(`${filePath}/${lowerName}.test.tsx`,initTest()); //增加测试文件
-		writeFile(`${filePath}/index.tsx`,initTsx(answers));    //增加组件文件
+		writeFile(`${filePath}/${lowerName}.tsx`,initTsx(answers));    //增加组件文件
 		writeFile(`${filePath}/index.tsx`,initIndex(answers)); //增加index入口文件
 		appendFile(`index.tsx`,`\r\nexport { default as ${answers.name} } from './components/${answers.name}';`);
 		writeFile(`config.json`,JSON.stringify(addConf(answers), null, 2));
